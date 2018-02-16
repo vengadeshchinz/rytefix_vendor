@@ -1,0 +1,58 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-title> Rytefix Partner</ion-title>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding class="background">
+    
+      <div class="icon2">
+        <ion-avatar class="avatar" >
+          <img src="http://sunrisetechs.com/images/imgs/{{profile_pic}}">
+          </ion-avatar>
+          <!-- //image1312018131727.jpg -->
+         </div>
+         <div class="text1">
+          <p>{{username}}</p>
+          <p>{{area}}</p>
+        </div>
+         
+    <ion-grid class="ion-grid">
+      <div class="animate-left">
+        <ion-row wrap class="container">
+          <ion-col class="ion-col" (click)="newServiceRequest()" tappable><img class="iconImage" src="http://sunrisetechs.com//images/imgs/new-service.png" />
+            <!-- <ion-label fixed class="iconLabel">service request</ion-label> -->
+          </ion-col>
+          <ion-col class="ion-col" (click)="QuotesAndResponse()"><img class="iconImage" src="http://sunrisetechs.com//images/imgs/list.png" />
+            <!-- <ion-label fixed class="iconLabel">Customer response</ion-label> -->
+          </ion-col>
+        </ion-row>
+      </div>
+  
+      <div class="animate-left">
+        <ion-row wrap class="container">
+            <ion-col class="ion-col" (click)="serviceStatement()"><img class="iconImage" src="http://sunrisetechs.com//images/imgs/approve.png" />
+              <!-- <ion-label fixed class="iconLabel">Service Statement</ion-label> -->
+            </ion-col>
+          <ion-col class="ion-col" (click)="rfwallet()" tappable><img class="iconImage" src="http://sunrisetechs.com//images/imgs/rf-wallet.png" />
+            <!-- <ion-label fixed class="iconLabel">RF Wallet</ion-label> -->
+          </ion-col>
+        </ion-row>
+      </div>
+      <!-- <div class="animate-left">
+        <ion-row wrap class="container">
+            <ion-col class="ion-col" (click)="sellingAndBuy()" tappable><img class="iconImage" src="http://sunrisetechs.com//images/imgs/contacts.png" />
+             
+            </ion-col>
+          <ion-col class="ion-col" (click)="sellingAndBuy()"><img class="iconImage" src="http://sunrisetechs.com//images/imgs/buying.png" />
+          </ion-col>
+        </ion-row>
+      </div> -->
+    </ion-grid> 
+  </ion-content>

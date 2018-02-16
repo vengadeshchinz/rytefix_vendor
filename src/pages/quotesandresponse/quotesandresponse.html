@@ -1,0 +1,51 @@
+<!--
+  Generated template for the QuotesandresponsePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Customer Response</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-list no-lines>
+        <ion-item class="item" *ngFor="let item of quotes">
+            <button ion-item (click)="openView(item)">
+         
+            <!-- <ion-avatar item-start>
+              <img [src]="item.image" />
+            </ion-avatar> -->
+            <h2>{{item.username}}</h2>
+            <p *ngIf="(item.gadget)">{{item.gadget}}</p>
+            <p *ngIf="(item.make)">{{item.make}}</p>
+            <p *ngIf="(item.model)">{{item.model}}</p>
+            <p *ngIf="(item.hardware)">{{item.hardware}}</p>
+            <p *ngIf="(item.software)">{{item.software}}</p>
+            <p *ngIf="(item.others)">{{item.others}}</p>
+          <h6 *ngIf="(item.accept_status==1)">Status : <span class="color1">Quoted</span></h6>
+          <h6 *ngIf="(item.accept_status==2)">Status :<span class="color2"> Declined to quote</span></h6>
+          <h6 *ngIf="(item.accept_status==3)">Status :<span class="color3"> Accepted</span></h6>
+          <h6 *ngIf="(item.accept_status==4)">Status :<span class="color4"> Declined by customer</span></h6>
+          <h6 *ngIf="(item.accept_status==5)">Status :<span class="color4">Service cancelled</span></h6>
+          <h6 *ngIf="(item.quote_expiry==1)">Status :<span class="color4">Expired</span></h6>
+
+        </button>
+        <button class="editButton" ion-button *ngIf="(item.accept_status==1)"  (click)="editQuote(item)"> Edit Quote</button>
+
+          <button ion-button item-end round color="secondary" (click)="call(item)"> <ion-icon ios="ios-call" md="md-call"></ion-icon></button>
+
+          <button ion-button item-end *ngIf="(item.chat=='Yes')" color="dark"  round (click)="chat()" ><ion-icon ios="ios-chatbubbles" md="md-chatbubbles"></ion-icon></button>
+          <hr class="style1">
+        </ion-item>
+      </ion-list>
+      <div *ngIf="quotes?.length==0">
+          <ion-label class="datalength">No Services Found</ion-label>
+      </div>
+</ion-content>

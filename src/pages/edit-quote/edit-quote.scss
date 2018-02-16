@@ -1,0 +1,90 @@
+page-edit-quote {
+
+
+   
+    .contact{
+
+        margin-top: 10px;
+    }
+    .text{
+        margin-top: 15px;
+        font-size: 11px;
+        border-radius: 8px;
+        width: auto;
+        -webkit-text-fill-color: grey;
+    }
+    .record{
+        margin-top: -8px;
+        border-radius: 8px;
+        width: auto;
+       // height: 40px;
+       background-color: #7a3e3e;
+        -webkit-text-fill-color: #fff;
+    }
+    .voice{
+        color:#fff;
+        margin-top: 20px;
+    }
+
+    .myCustomSelect{
+        max-width: 100% !important;
+        margin-left: 0px;
+      }
+    
+    .header{
+    
+        -webkit-text-fill-color: white;
+        font-size: 20px;
+    }
+    
+    .background{
+    //  background: url('../img/bg.jpg');
+     background-repeat: no-repeat;
+     background-size:cover;
+     background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .ion-cards{
+         margin-top: 5px;
+        //  background: transparent;
+        background-color: rgba(40, 40, 40, 0.5);
+        border-radius: 25px 25px 25px 25px;
+        -webkit-box-shadow:  15px 0px 5px -3px rgba(40, 40, 40, 0.8);
+           -moz-box-shadow:  15px 0px 5px -3px rgba(40, 40, 40, 0.8);
+                box-shadow:  15px 0px 5px -3px rgba(40, 40, 40, 0.8);
+          padding: 10px; 
+    
+          position: relative;
+      -webkit-animation-name: animateleft;
+      -webkit-animation-duration: 1s;
+      animation-name: animateleft;
+      animation-duration: 1s;
+    
+    }
+    
+    // animate left......................
+    
+    @-webkit-keyframes animateleft {
+      from { left:-100px; opacity:0 } 
+      to { left:0px; opacity:1 }
+    }
+    
+    @keyframes animateleft { 
+      from{ left:-100px; opacity:0 } 
+      to{ left:0px; opacity:1 }
+    }
+    
+    // Contact us button
+    .button1{
+      // background-color: rgba(60, 610, 60, 0.6);
+       border-radius: 10px;
+        margin-top: 20px;
+    }
+
+    .button{
+        background-color: #7a3e3e;
+         border-radius: 10px;
+          margin-top: 20px;
+      }
+            
+}

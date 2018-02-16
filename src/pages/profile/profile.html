@@ -1,0 +1,79 @@
+<!--
+  Generated template for the ProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons left>
+            <button ion-button icon-only (click)="gotoTabspage()">
+                <ion-icon name="arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-title>Profile</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+<ion-content>
+    
+  <form [formGroup]="updateprofile">
+<ion-list>
+  <ion-item>
+ <ion-label floating>Username</ion-label>
+ <ion-input type="text"   [(ngModel)]="username"  formControlName="username"value={{profiledata.username}}>{{username}}</ion-input> 
+</ion-item>
+
+<ion-item no-lines *ngIf="!updateprofile.controls.username.valid && submit">
+ <ion-label  color="danger">Username is Required</ion-label>
+</ion-item>
+
+<ion-item>
+ <ion-label floating>Street</ion-label>
+ <ion-input type="text"   [(ngModel)]="street"  formControlName="street" value={{profiledata.street}}>{{street}}</ion-input> 
+</ion-item>
+
+<ion-item no-lines *ngIf="!updateprofile.controls.street.valid && submit">
+  <ion-label  color="danger">Street is Required</ion-label>
+</ion-item>
+
+<ion-item>
+   <ion-label floating>Area</ion-label>
+    <ion-input type="text"   [(ngModel)]="area" formControlName="area" value={{profiledata.area}}>{{area}}</ion-input> 
+ </ion-item>
+
+<ion-item no-lines *ngIf="!updateprofile.controls.area.valid && submit">
+    <ion-label  color="danger">Area is Required</ion-label>
+ </ion-item> 
+
+ <ion-item>
+     <ion-label floating>City</ion-label>
+      <ion-input type="text"   [(ngModel)]="city" formControlName="city"value={{profiledata.city}}>{{city}}</ion-input> 
+   </ion-item>
+ 
+  <ion-item no-lines *ngIf="!updateprofile.controls.city.valid && submit">
+      <ion-label  color="danger">City is Required</ion-label>
+   </ion-item>
+
+   <ion-item>
+       <ion-label floating>Pincode</ion-label>
+        <ion-input type="text"  [(ngModel)]="pincode"  formControlName="pincode"value={{profiledata.pincode}}>{{pincode}}</ion-input> 
+     </ion-item>
+    
+    <ion-item no-lines *ngIf="!updateprofile.controls.pincode.valid && submit">
+        <ion-label  color="danger">Pincode is Required</ion-label>
+     </ion-item>
+</ion-list>
+</form> 
+<ion-item>
+ <h6>Profile image</h6>
+        <p>{{imageURI}}</p>
+        <button ion-button color="secondary" (click)="getImage()">Get Image</button>
+        <!-- <button ion-button (click)="uploadFile()">Upload</button> -->
+</ion-item>
+
+</ion-content> 
+<ion-footer>
+<button ion-button  block  outline (click)="profileUpadate()">Save</button>
+</ion-footer>

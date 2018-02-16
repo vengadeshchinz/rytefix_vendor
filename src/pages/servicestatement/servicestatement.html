@@ -1,0 +1,103 @@
+<!--
+  Generated template for the ServicestatementPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Service Statement</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content  class="background">
+        <ion-grid>
+            <ion-row>
+              <ion-col>
+                  <ion-item color = "light">
+                      <ion-datetime  class="date" displayFormat="YYYY MM DD" placeholder= "From" [(ngModel)]="fromdate"></ion-datetime>
+                    </ion-item>
+              </ion-col>
+              <ion-col>
+                  <ion-item>
+                      <ion-datetime  class="date" displayFormat="YYYY MM DD"  placeholder= "To" [(ngModel)]="todate"></ion-datetime>
+                    </ion-item>
+              </ion-col>
+              <ion-col>
+                  <button ion-button round color="light" (click)="search()"> <ion-icon name="search"></ion-icon></button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+
+            <main class="ion-card"  *ngFor= "let data of data">
+                
+                <p id="name">{{data.username}}</p>
+                 <ion-item no-lines>
+              
+                  <hr class="hrStyle">
+                <ion-grid>
+                    <ion-row>
+                      <ion-col>
+                          <h5><b>Gadget:</b></h5>
+                      </ion-col>
+                      <ion-col>
+                          <h5><b>{{data.gadget}}</b></h5>
+                      </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col>
+                            <h5 *ngIf="data.software"><b>Software:</b></h5>
+                        </ion-col>
+                        <ion-col>
+                            <h5><b>{{data.software}}</b></h5>
+                        </ion-col>
+                      </ion-row>
+                      <ion-row>
+                          <ion-col>
+                              <h5 *ngIf="data.hardware"><b>Hardware:</b></h5>
+                          </ion-col>
+                          <ion-col>
+                              <h5><b>{{data.hardware}}</b></h5>
+                          </ion-col>
+                        </ion-row>
+                        <ion-row>
+                            <ion-col>
+                                <h5 *ngIf="data.others"><b>Others:</b></h5>
+                            </ion-col>
+                            <ion-col>
+                                <h5><b>{{data.others}}</b></h5>
+                            </ion-col>
+                          </ion-row>
+                        <ion-row>
+                            <ion-col>
+                                <h5 *ngIf="data.reason"><b>Reason:</b></h5>
+                            </ion-col>
+                            <ion-col>
+                                <h5><b>{{data.reason}}</b></h5>
+                            </ion-col>
+                          </ion-row>
+                        
+                  </ion-grid>
+              
+                <ion-row class="ion-row">
+                    <h6 *ngIf="(data.accept_status==1)">Status : <span class="color1">Quoted</span></h6>
+                    <h6 *ngIf="(data.accept_status==2)">Status :<span class="color2"> Declined Quote</span></h6>
+                    <h6 *ngIf="(data.accept_status==3)">Status :<span class="color3"> Accepted</span></h6>
+                    <h6 *ngIf="(data.accept_status==4)">Status :<span class="color4"> Declined by customer</span></h6>
+                    <h6 *ngIf="(data.cancel_status==1)">Status :<span class="color4"> Service Cancelled</span></h6>
+                    <h6 *ngIf="(data.cancel_status==2)">Status :<span class="color4"> Service Cancelled</span></h6>
+                    <h6 *ngIf="(data.complete_status==1)">Status :<span class="color3"> completed</span></h6>
+                    <h6 *ngIf="(data.quote_expiry==1)">Status :<span class="color3"> Expired</span></h6>
+                    
+                </ion-row>
+              
+                </ion-item>
+               
+              </main>
+              <div *ngIf="data?.length==0">
+                    <ion-label class="datalength">No Services Found</ion-label>
+                </div>
+</ion-content>

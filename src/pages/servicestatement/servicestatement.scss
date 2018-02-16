@@ -1,0 +1,233 @@
+page-servicestatement {
+
+    .color1{
+        color:#47BEC2;
+    }
+    .color2{
+        color:#FF0000;
+    }
+    .color3{
+        color:#008000;
+    }
+    .color4{
+        color:#FF5733;
+    }
+
+    .date{
+        width: 80px;
+        font-size: 10px;
+        font-weight: 20px;
+    }
+    .button{
+        margin-left: 0px;
+        width: 35px;
+        // font-size: 10px;
+    }
+
+    .background{
+        
+     background-color: rgb(216, 216, 208);
+     background-repeat: no-repeat;
+     background-size:cover;
+   }
+   
+   @keyframes colorchange{
+     0%{background-position: 0% 99%}
+     50%{background-position: 100% 1%}
+     100%{background-position: 10% 90%}
+   }
+   
+   .ion-row{
+       margin-top: 20px;
+   }
+   .item{
+    //    background: transparent;
+       margin-bottom: 10px;
+       border-radius: 10px;
+       background: rgba(255, 255, 255, 0.5);
+       border: medium none;
+   }
+   
+   .hrStyle{
+       border: 0; 
+     height: 1px; 
+     background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+     background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+     background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+     background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0); 
+   }
+   
+   .card{
+       
+       height: auto;
+       margin-top: 20px;
+       width: auto;
+   }
+   
+   .icon{
+       margin-right: 3px;
+   }
+   .ion-card{
+   
+     width:330px;
+     height: auto;
+        //background: linear-gradient(250deg,#FFF,#FFF,#FFF);
+         background-color: #ffffff;
+         opacity: 0.9;
+     filter: alpha(opacity=60);
+         background-size: 400% 400%;
+         border: 3px solid #E2E0E2;
+       border-radius: 25px 25px 25px 25px;
+     margin-top: 0px;
+     margin-bottom: 20px;
+       -webkit-box-shadow:  10px 20px 20px -6px #777;
+          -moz-box-shadow:  10px 20px 20px -6px #777;
+               box-shadow:  10px 20px 20px -6px #777;
+         padding: 5px; 
+   
+   
+         position: relative;
+     -webkit-animation-name: animatebottom;
+     -webkit-animation-duration: 1s;
+     animation-name: animatebottom;
+     animation-duration: 1s;
+   
+   }
+   
+   @-webkit-keyframes animatebottom {
+     from { bottom:-100px; opacity:0 } 
+     to { bottom:0px; opacity:1 }
+   }
+   
+   @keyframes animatebottom { 
+     from{ bottom:-100px; opacity:0 } 
+     to{ bottom:0px; opacity:1 }
+   }
+   
+   .price{
+       margin-left: 200px;
+   }
+   
+   
+   
+   
+   
+   
+   
+   @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Oswald:400);
+   
+   html {
+     height: 100%;
+     font-size: 100%;
+   }
+   body {
+     background: radial-gradient(ellipse at center, #8d93a0 0%, #404149 100%);
+   }
+   main {
+     width: 16rem;
+     margin: 10rem auto;
+     background: rgba(255,255,255,0.8);
+     border-radius: 0.2rem;
+     padding: 1rem;
+     color: #333;
+   }
+   #name {
+     font-family: "Oswald", "Arial";
+     font-size: 13px;
+     text-transform: uppercase;
+     text-align: center;
+     letter-spacing: 0.1rem;
+     margin-bottom: 0px;
+   }
+   .info {
+     font-family: "Roboto Condensed", "Arial";
+     font-size: 1.08rem;
+     margin-bottom: 1.8rem;
+   }
+   #circle {
+     display: block;
+     position: relative;
+     width: 8rem;
+     height: 8rem;
+     margin: -5rem auto 0 auto;
+     text-align: center;
+     overflow: hidden;
+     perspective: 1200px;
+   }
+   #circle:hover #circle-flip {
+     transform: rotateY(180deg);
+   }
+   @keyframes flip {
+     10% {
+       transform: rotateY(180deg);
+     }
+     90% {
+       transform: rotateY(180deg);
+     }
+   }
+   #circle-flip {
+     width: 100%;
+     height: 100%;
+     transform-style: preserve-3d;
+     transition: all 500ms;
+     animation: flip 3s;
+     animation-delay: 0.5s;
+   }
+   .front, .back, .bottom {
+     position: absolute;
+     height: 100%;
+     width: 100%;
+     backface-visibility: hidden;
+   }
+   #circle .front {
+     background: url('../img/posttruck.png') #DDD;
+     
+     background-size: cover;
+     border-radius: 50%;
+   }
+   #circle .back {
+     background: url('../img/truck.png') #FFF;
+     background-size: 35%;
+     background-repeat: no-repeat;
+     background-position: center 35%;
+     line-height: 11rem;
+     color: #666;
+     font-family: "Roboto Condensed", "Arial";
+     font-size: 0.9rem;
+     text-transform: uppercase;
+     text-align: center;
+     letter-spacing: 0.08rem;
+     border-radius: 50%;
+     transform: rotateY(180deg);
+   }
+
+
+   @keyframes underflip {
+     10% {
+       transform: rotateX(90deg);
+     }
+     90% {
+       transform: rotateX(90deg);
+     }
+   }
+
+   footer {
+     position: fixed;
+     bottom: 0;
+     right: 10px;
+     font-family: "Roboto Condensed", "Arial";
+     font-size: 0.8em;
+     color: rgba(255,255,255,0.3);
+   }
+   
+   @media all and (min-width: 1800px), (min-resolution: 192dpi) {
+     html {
+       font-size: 150%;
+     }
+   }
+   .datalength{
+    font-weight: 700;
+    color:#7a3e3e;
+    text-align: center;
+  }  
+}

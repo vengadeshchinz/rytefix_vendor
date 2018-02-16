@@ -1,0 +1,38 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>RF Wallet</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div class="card">
+    <div class="cover">
+      <!-- <h1>WALLET BALANCE</h1> -->
+      <p class="p">₹{{walletBalance}}</p>
+      <h1>WALLET BALANCE</h1>
+    </div>
+    
+  </div>
+  <ion-label class="recharge_label">Recharge amount</ion-label>
+  <ion-row >
+   <ion-col>
+    <button ion-button (click)="recharge500()" class="rechargeamount"  outline>500 </button>
+   </ion-col>
+   <ion-col >
+     <button ion-button (click)="recharge1000()" class="rechargeamount"  outline>1000</button>
+  </ion-col>
+   <ion-col >
+      <button ion-button (click)="recharge1500()" class="rechargeamount" outline>1500</button>
+   </ion-col>
+ </ion-row>
+  <ion-item>
+    <ion-input type="number" placeholder="Enter the recharge amount" [(ngModel)]="rechargeamount" ></ion-input>
+  </ion-item>
+  <button ion-button block  round (click)="recharge()" class="rechargebutton">RECHARGE</button>
+  <!-- <button ion-button block  round (click)="razorpay()" class="rechargebutton">RECHARGE</button> -->
+  <button ion-button block round (click)="transfer()" class="transferbutton">TRANSFER TO BANK</button>
+</ion-content>

@@ -1,0 +1,87 @@
+page-contactus {
+
+  .background{
+      background: url('../assets/imgs/bg1.jpg');
+      background-repeat: no-repeat;
+      background-size:cover;
+     }
+     .paraText{
+         -webkit-text-fill-color: whitesmoke;
+         text-align: justify;
+         text-indent: 50px;
+         line-height: 1.5;
+         word-spacing: 1px;
+         
+     }
+     
+     .button{
+        background-color: rgba(60, 60, 60, 0.4);
+         margin-top: 70px;
+     }
+     .emailbutton{
+      background-color: rgba(60, 60, 60, 0.4);
+       margin-top: 10px;
+   }
+     
+     .div{
+         padding: 10px;
+         height: auto;
+         background-color: rgba(40, 40, 40, 0.7);
+         border-radius: 25px 25px 25px 25px;
+         -webkit-box-shadow:  15px 0px 5px -3px rgba(40, 40, 40, 0.5);
+            -moz-box-shadow:  15px 0px 5px -3px rgba(40, 40, 40, 0.5);
+                 box-shadow:  15px 0px 5px -3px rgba(40, 40, 40, 0.5);
+     }
+     .header{
+         text-transform: uppercase;
+     
+       -webkit-text-fill-color: whitesmoke;
+     
+     }
+     
+     // animate right...............
+     
+     .animate-right {
+       margin-top: 40px;
+       position: relative;
+       -webkit-animation-name: animateright;
+       -webkit-animation-duration: 1s;
+       animation-name: animateright;
+       animation-duration: 1s
+     }
+     
+     @-webkit-keyframes animateright {
+       from { right:-100px; opacity:0 } 
+       to { right:0px; opacity:1 }
+     }
+     
+     @keyframes animateright { 
+       from{ right:-100px; opacity:0 } 
+       to{ right:0px; opacity:1 }
+     }
+     
+     
+     //animate bottom....................
+     .animate-bottom {
+       position: relative;
+       -webkit-animation-name: animatebottom;
+       -webkit-animation-duration: 1s;
+       animation-name: animatebottom;
+       animation-duration: 1s
+     }
+     
+     @-webkit-keyframes animatebottom {
+       from { bottom:-100px; opacity:0 } 
+       to { bottom:0px; opacity:1 }
+     }
+     
+     @keyframes animatebottom { 
+       from{ bottom:-100px; opacity:0 } 
+       to{ bottom:0px; opacity:1 }
+     }
+     .text{
+      color:#fff;
+      font-family: cursive;
+      font-size: 2.5rem !important;
+    }
+}

@@ -1,0 +1,71 @@
+<!-- <ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ 'LOGIN_TITLE' | translate }}</ion-title>
+  </ion-navbar>
+
+</ion-header> -->
+
+
+<ion-content class="background">
+  <!-- <form (submit)="doLogin()">
+    <ion-list>
+
+      <ion-item>
+        <ion-label fixed>{{ 'EMAIL' | translate }}</ion-label>
+        <ion-input type="email" [(ngModel)]="account.email" name="email"></ion-input>
+      </ion-item> -->
+
+      <!--
+      Want to use a Username instead of an Email? Here you go:
+
+      <ion-item>
+        <ion-label floating>{{ 'USERNAME' | translate }}</ion-label>
+        <ion-input type="text" [(ngModel)]="account.username" name="username"></ion-input>
+      </ion-item>
+      -->
+
+      <!-- <ion-item>
+        <ion-label fixed>{{ 'PASSWORD' | translate }}</ion-label>
+        <ion-input type="password" [(ngModel)]="account.password" name="password"></ion-input>
+      </ion-item>
+
+      <div padding>
+        <button ion-button color="primary" block>{{ 'LOGIN_BUTTON' | translate }}</button>
+      </div>
+
+    </ion-list>
+  </form> -->
+
+  <ion-card>
+    <ion-card-content>
+        <ion-list>
+            <img class="logo" src='http://sunrisetechs.com/images/imgs/appicon.png'/>
+            <ion-label class="logoname">LOGIN </ion-label>
+        </ion-list> 
+      <ion-list no-line>
+        <ion-item>
+          <!-- <ion-label floating>Username</ion-label> -->
+          <ion-input [(ngModel)]="account.mobile" type="text" placeholder="mobile number"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <!-- <ion-label floating>Password</ion-label> -->
+          <ion-input [(ngModel)]="account.password" type="password" placeholder="password"></ion-input>
+        </ion-item>
+        <a (click)="forgotpassword()">Forgot Password ?
+          <b>Get help Signing in </b>
+        </a>
+        <button ion-button block color="light" (click)="doLogin()">
+          <ion-icon class="ion-icon" name="ios-contact-outline"></ion-icon>
+          LOGIN
+        </button>
+        <p>OR</p>
+        <button ion-button block style="background-color:#7a3e3e;color:#fff"  (click)="signup()">
+            <ion-icon class="ion-icon" name="ios-contact-outline"></ion-icon>
+            REGISTER
+          </button>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

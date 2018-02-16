@@ -1,0 +1,170 @@
+<ion-header>
+
+    <ion-navbar>
+      <ion-title center>{{ item.username }}</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <!-- <ion-content>
+    <div class="item-profile" text-center #profilePic [style.background-image]="'url(' + item.profilePic + ')'">
+    </div>
+  
+    <div class="item-detail" padding>
+      <h2>{{item.name}}</h2>
+      <p>{{item.about}}</p>
+    </div>
+  </ion-content> -->
+  
+  <ion-content align="center" class="background">
+    <!-- <div class="item-profile" *ngIf="item.image" text-center #profilePic style.background-image="http://sunrisetechs.com/images/imgs/test.jpg">
+    </div> -->
+    <img *ngIf="item.image" src="http://sunrisetechs.com/images/imgs/{{item.image}}"/>
+    <ion-list no-lines>
+      <ion-list-header align="center" class="listHeader1">
+        <b>Booking details</b>
+      </ion-list-header>
+  
+         <ion-row>
+           <ion-col col-1></ion-col>
+            <ion-col col-4 text-left>
+                 <div *ngIf="item.gadget"><b>Gadget</b></div>
+             </ion-col>
+             <ion-col col-1><b *ngIf="item.gadget">:</b></ion-col>
+             <ion-col col-6 text-left ><span>{{item.gadget}}</span></ion-col>
+             <!-- <ion-col col-2></ion-col> -->
+           </ion-row>
+           <ion-row>
+              <ion-col col-1></ion-col>
+              <ion-col col-4 text-left>
+                   <div *ngIf="item.make_name"><b>Make</b></div>
+               </ion-col>
+               <ion-col col-1><b *ngIf="item.make_name">:</b></ion-col>
+               <ion-col col-6 text-left ><span >{{item.make_name}}</span></ion-col>
+               <!-- <ion-col col-2></ion-col> -->
+             </ion-row>
+               <ion-row>
+                  <ion-col col-1></ion-col>
+                  <ion-col col-4 text-left>
+                       <div *ngIf="item.othermodel"><b>Model</b></div>
+                   </ion-col>
+                   <ion-col col-1><b *ngIf="item.othermodel">:</b></ion-col>
+                   <ion-col col-6 text-left ><span>{{item.othermodel}}</span></ion-col>
+                   <!-- <ion-col col-2></ion-col> -->
+                 </ion-row>
+                  <ion-row>
+                      <ion-col col-1></ion-col>
+                    <ion-col col-4 text-left>
+                         <div><b>Problem</b></div>
+                     </ion-col>
+                     <ion-col col-1><b>:</b></ion-col>
+                     <ion-col col-6 text-left >
+                        <span *ngIf="item.software" >{{item.software}}</span>
+                        <span *ngIf="item.service_type=='2'">{{item.service}}</span>
+                        <span *ngIf="item.others" >{{item.others}}</span>
+                      </ion-col>
+                     <!-- <ion-col col-2></ion-col> -->
+                   </ion-row>
+  
+                 <ion-row>
+                    <ion-col col-1></ion-col>
+                    <ion-col col-4 text-left>
+                         <div *ngIf="item.pickup_type"><b>Pickup Status</b></div>
+                     </ion-col>
+                     <ion-col col-1><b *ngIf="item.pickup_type">:</b></ion-col>
+                     <ion-col col-6 text-left ><span>{{item.pickup_type}}</span></ion-col>
+                   </ion-row>
+
+                   <ion-row>
+                    <ion-col col-1></ion-col>
+                    <ion-col col-4 text-left>
+                         <div *ngIf="item.area"><b>Prefered area</b></div>
+                     </ion-col>
+                     <ion-col col-1><b *ngIf="item.area">:</b></ion-col>
+                     <ion-col col-6 text-left ><span>{{item.area}}</span></ion-col>
+                   </ion-row>
+                   <ion-row>
+                    <ion-col col-1></ion-col>
+                    <ion-col col-4 text-left>
+                         <div *ngIf="item.credit3"><b>To complete service</b></div>
+                     </ion-col>
+                     <ion-col col-1><b *ngIf="item.credit3">:</b></ion-col>
+                     <ion-col col-6 text-left ><span>{{item.credit3}} Credits</span></ion-col>
+                   </ion-row>
+                   <ion-row *ngIf="(item.customer_audio)" (click)="playAudio(item.customer_audio)">
+                 
+                    <ion-col>
+                        <button ion-button class="record" (click)="playAudio(item.customer_audio)" ><ion-icon name="ios-mic" color="dark">&nbsp;</ion-icon>&nbsp;&nbsp;Audio {{item.customer_audio}}</button>
+                    </ion-col>
+                  </ion-row>
+                   
+  
+  
+      <!-- <ion-item *ngIf="item.username">Name: <i color="secondary">{{item.username}}</i></ion-item>
+      <ion-item *ngIf="item.address">Address: <i color="secondary">{{item.address}}</i></ion-item>
+      <ion-item *ngIf="item.city">City: <i color="secondary">{{item.city}}</i></ion-item>
+    </ion-list>
+  
+     <ion-list no-lines>
+       <ion-list-header align="center" class="listHeader">
+        <i><b> Issue request Id: {{item.booking_id}}</b></i>
+      </ion-list-header> -->
+      <!-- <ion-item *ngIf="item.gadget"><b>Gadget: </b><i color="secondary">{{item.gadget}}</i></ion-item>
+      <ion-item *ngIf="item.make_name"><b>Make:</b> <i color="secondary">{{item.make_name}}</i></ion-item>
+      <ion-item *ngIf="item.Model"><b>Model: </b><i color="secondary">{{item.Model}}</i></ion-item>
+      <ion-item *ngIf="item.othermodel"><b>Model: </b><i color="secondary">{{item.othermodel}}</i></ion-item>
+      <ion-item ><b>Problem: </b>
+          <i *ngIf="item.software" color="secondary">{{item.software}}</i>
+          <i *ngIf="item.service_type=='2'" color="secondary">{{item.service}}</i>
+          <i *ngIf="item.others" color="secondary">{{item.others}}</i>
+        </ion-item> -->
+      <!-- <ion-item *ngIf="item.software">Software: <p color="secondary">{{item.software}}</p></ion-item>
+      <ion-item *ngIf="item.service_type=='2'">Hardware: <p color="secondary">{{item.service}}</p></ion-item>
+      <ion-item *ngIf="item.others">Others: <p color="secondary">{{item.others}}</p></ion-item> 
+      <ion-item *ngIf="item.pickup"><b>Pickup Status: </b><i color="secondary">{{item.pickup}}</i></ion-item> -->
+      <!-- <p *ngIf="item.service_type=='2'">Hardware Issue: {{item.service}}</p> -->
+      <!-- <ion-item *ngIf="item.posted_on">Posted on: <i color="secondary">{{item.posted_on}}</i></ion-item> -->
+  
+    </ion-list>
+    <!-- <button ion-button block outline class="enquiryButton" (click)="creditCheck()">SEND QUOTE( {{credits}} credits will be debited) </button>
+    <button ion-button block outline color='danger' class="enquiryButton" (click)="decline()">DECLINE ( {{credit1}} credits will be credited)</button> -->
+    <ion-row style="margin-left: -15px">
+      <ion-col col-1></ion-col>
+      <ion-col col-4>
+          <button ion-button   class="enquiryButton" (click)="creditCheck()">
+            <ion-grid>
+              <ion-row>
+                <ion-col col-8>
+                    SEND QUOTE
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col col-8>
+                    <sub style="left:8px">({{credits}} credits)</sub>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </button>
+           </ion-col>
+           <ion-col col-2></ion-col>
+           <ion-col col-4>
+              <button ion-button   class="enquiryButton1" (click)="decline()">
+                  <ion-grid>
+                    <ion-row> 
+                      <ion-col col-8>
+                          &nbsp;&nbsp;    DECLINE
+                      </ion-col>
+                    </ion-row>
+                    <ion-row>
+                      <ion-col col-8>
+                          <sub style="left:0px">(No Charges)</sub> 
+                      </ion-col>
+                    </ion-row>
+                  </ion-grid>
+                </button>
+           </ion-col>
+           <ion-col col-1></ion-col>
+    </ion-row>
+  
+  </ion-content>

@@ -1,0 +1,191 @@
+<!--
+  Generated template for the ViewresponsePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Response Details</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+    <main class="ion-card">
+        
+        <p id="name">Customer request</p>
+         <ion-item no-lines>
+      
+          <hr class="hrStyle">
+        <ion-grid>
+                <ion-row *ngIf="(responseData.username)">
+                        <!-- <ion-col col-1></ion-col> -->
+                  <ion-col col-4 text-left>
+                      <h5><b>Name</b></h5>
+                  </ion-col>
+                  <ion-col col-1><b>:</b></ion-col>
+                  <ion-col col-7 text-left>
+                      <h5>{{responseData.username}}</h5>
+                  </ion-col>
+                </ion-row>
+                <ion-row *ngIf="(responseData.gadget)">
+                        <!-- <ion-col col-1></ion-col> -->
+                    <ion-col col-4 text-left>
+                        <h5><b>Gadget</b></h5>
+                    </ion-col>
+                    <ion-col col-1><b>:</b></ion-col>
+                    <ion-col col-7 text-left>
+                        <h5>{{responseData.gadget}}</h5>
+                    </ion-col>
+                  </ion-row>
+                  <ion-row *ngIf="(responseData.make)">
+                        <!-- <ion-col col-1></ion-col> -->
+                    <ion-col col-4 text-left>
+                        <h5><b>Make</b></h5>
+                    </ion-col>
+                    <ion-col col-1><b>:</b></ion-col>
+                    <ion-col col-7 text-left>
+                        <h5>{{responseData.make}}</h5>
+                    </ion-col>
+                  </ion-row>
+                  <ion-row *ngIf="(responseData.model)">
+                        <!-- <ion-col col-1></ion-col> -->
+                    <ion-col col-4 text-left>
+                        <h5><b>Model</b></h5>
+                    </ion-col>
+                    <ion-col col-1><b>:</b></ion-col>
+                    <ion-col col-7 text-left>
+                        <h5>{{responseData.model}}</h5>
+                    </ion-col>
+                  </ion-row>
+                  <ion-row>
+                        <!-- <ion-col col-1></ion-col> -->
+                      <ion-col col-4 text-left>
+                          <h5><b>Problem</b></h5>
+                      </ion-col>
+                      <ion-col col-1><b>:</b></ion-col>
+                      <ion-row>
+                <ion-col col-7  text-left>
+                       <p *ngIf="(responseData.hardware)">{{responseData.hardware}}</p>
+                        <p *ngIf="(responseData.software)">{{responseData.software}}</p>
+                          <p *ngIf="(responseData.others)">{{responseData.others}}</p>
+                       </ion-col>
+                       </ion-row>
+                    
+                  
+                  
+                    <!-- <ion-col col-1></ion-col> -->
+                    </ion-row>
+              </ion-grid>
+            </ion-item>
+    
+            <p id="name">Your Quote</p>
+            <ion-item no-lines>
+         
+             <hr class="hrStyle">
+           <ion-grid>
+               <ion-row *ngIf="(QuotedData.data.exactprice)">
+                    <!-- <ion-col col-1></ion-col> -->
+                 <ion-col col-4 text-left>
+                     <h5><b>Quoted price</b></h5>
+                 </ion-col>
+                 <ion-col col-1><b>:</b></ion-col>
+                 <ion-col col-7 text-left>
+                     <h5>{{QuotedData.data.exactprice}}</h5>
+                 </ion-col>
+               </ion-row>
+               <ion-row *ngIf="(QuotedData.data.pickup)">
+                    <!-- <ion-col col-1></ion-col> -->
+                   <ion-col col-4 text-left>
+                       <h5><b>Pick up</b></h5>
+                   </ion-col>
+                   <ion-col col-1><b>:</b></ion-col>
+                   <ion-col col-7 text-left>
+                       <h5>{{QuotedData.data.pickup}}</h5>
+                   </ion-col>
+                 </ion-row>
+                 <ion-row *ngIf="(QuotedData.data.time_period)">
+                        <!-- <ion-col col-1></ion-col> -->
+                     <ion-col col-4>
+                         <h5><b>Time period</b></h5>
+                     </ion-col>
+                     <ion-col col-1><b>:</b></ion-col>
+                     <ion-col col-7 text-left>
+                         <h5>{{QuotedData.data.time_period}}</h5>
+                     </ion-col>
+                   </ion-row>
+                   <ion-row *ngIf="(QuotedData.data.warranty)">
+                        <!-- <ion-col col-1></ion-col> -->
+                       <ion-col col-4 text-left>
+                           <h5><b>Warranty</b></h5>
+                       </ion-col>
+                       <ion-col col-1><b>:</b></ion-col>
+                       <ion-col col-7 text-left>
+                           <h5>{{QuotedData.data.warranty}}</h5>
+                       </ion-col>
+                     </ion-row>
+                     <ion-row *ngIf="(QuotedData.data.description)">
+                            <!-- <ion-col col-1></ion-col> -->
+                         <ion-col col-4 text-left>
+                             <h5><b>Description</b></h5>
+                         </ion-col>
+                         <ion-col col-1><b>:</b></ion-col>
+                         <ion-col col-7 text-left>
+                             <h5>{{QuotedData.data.description}}</h5>
+                         </ion-col>
+                       </ion-row>
+                     <ion-row *ngIf="(QuotedData.data.quote_date)">
+                            <!-- <ion-col col-1></ion-col> -->
+                         <ion-col col-4 text-left>
+                             <h5><b>Quoted on</b></h5>
+                         </ion-col>
+                         <ion-col col-1><b>:</b></ion-col>
+                         <ion-col col-7 text-left>
+                             <h5>{{QuotedData.data.quote_date}}</h5>
+                         </ion-col>
+                       </ion-row>
+                       <ion-row *ngIf="(QuotedData.data.accepted_date)">
+                            <!-- <ion-col col-1></ion-col> -->
+                           <ion-col col-4 text-left>
+                               <h5><b>Accepted on</b></h5>
+                           </ion-col>
+                           <ion-col col-1><b>:</b></ion-col>
+                           <ion-col col-7 text-left>
+                               <h5>{{QuotedData.data.accepted_date}}</h5>
+                           </ion-col>
+                         </ion-row>
+                       
+                       <ion-row *ngIf="(QuotedData.data.accept_status)">
+                            <!-- <ion-col col-1></ion-col> -->
+                           <ion-col col-4 text-left>
+                               <h5><b>Status</b></h5>
+                               
+                           </ion-col>
+                           <ion-col col-1><b>:</b></ion-col>
+                           <ion-col col-7 text-left>
+                               <h6 *ngIf="(QuotedData.data.accept_status==1)"><span class="color1">Quoted</span></h6>
+                               <h6 *ngIf="(QuotedData.data.accept_status==2)"><span class="color2"> Declined to quote</span></h6>
+                               <h6 *ngIf="(QuotedData.data.accept_status==3)"><span class="color3"> Accepted</span></h6>
+                               <h6 *ngIf="(QuotedData.data.accept_status==4)"><span class="color4"> Declined by customer</span></h6>
+                               <h6 *ngIf="(QuotedData.data.cancel_status==1)"><span class="color4">Service cancelled</span></h6>
+                               <h6 *ngIf="(QuotedData.data.cancel_status==2)"><span class="color4">Service cancelled</span></h6>
+                               <h6 *ngIf="(QuotedData.data.quote_expiry==1)"><span class="color4"> Expired</span></h6>
+                           </ion-col>
+                         </ion-row>
+                     <ion-row *ngIf="(QuotedData.data.audio)" (click)="playAudio(QuotedData.data.audio)">
+                            <!-- <ion-col>
+                                <h5><b>Audio:</b></h5>
+                            </ion-col> -->
+                            <ion-col>
+                                <!-- <h5><b>{{QuotedData.data.audio}}</b></h5> -->
+                                <button ion-button class="record" (click)="playAudio(QuotedData.data.audio)" ><ion-icon name="ios-mic" color="dark">&nbsp;</ion-icon>&nbsp;&nbsp;Audio {{QuotedData.data.audio}}</button>
+                            </ion-col>
+                          </ion-row>
+         </ion-grid>
+       </ion-item>
+      </main>
+</ion-content>

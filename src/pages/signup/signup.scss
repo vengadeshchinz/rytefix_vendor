@@ -1,0 +1,82 @@
+page-signup {
+
+
+    .background {
+
+        background-image: url("../assets/imgs/bg4.jpg")
+    }
+
+    .ion-label {
+
+        color: black;
+    }
+
+    .terms{
+    
+    }
+    
+    .scroll-content {
+              align-content: center;
+            //   display: flex;
+            //   flex-direction: column;
+              justify-content: center;
+              text-align: center;
+                 }
+    ion-card.card{
+        box-shadow: none;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+    }  
+    
+    .ion-icon{
+
+        padding-right: 10px;
+    }
+
+    a,p,
+    ion-card-header.card-header {
+        color:#fff!important;
+    }
+    .list > .item-block .item-inner {
+        border: medium none;
+    }
+    .item {
+        height: 5 px;
+        margin-bottom: 5px;
+        background: rgba(255, 255, 255, 0.5);
+        border-radius: 5px;
+        border: medium none;
+
+        .text-input, {
+            color:#fff;
+        }
+
+        *:-moz-placeholder {
+            color: #fff!important;
+        }
+        *:-ms-input-placeholder {
+            color: #fff!important;
+        }
+        *::-webkit-input-placeholder {
+            color: #fff!important;
+        }
+
+        input::-moz-placeholder {
+            color: #fff!important;
+        }
+        input:-moz-placeholder {
+            color: #fff!important;
+        }
+    }
+
+    .item1 {
+        height: 5 px;
+        margin-bottom: 5px;
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        border: medium none;
+        
+    }
+
+
+}

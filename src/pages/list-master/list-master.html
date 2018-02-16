@@ -1,0 +1,38 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Service Requests</ion-title>
+
+    <!-- <ion-buttons end>
+      <button ion-button icon-only (click)="addItem()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons> -->
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+  <ion-list no-lines>
+    <ion-item *ngFor="let item of assignedOffers">
+      <button ion-item (click)="openItem(item)">
+        <ion-avatar item-start>
+          <img  src="http://sunrisetechs.com/images/imgs/{{item.profile_pic}}" />
+        </ion-avatar>
+        <h2 *ngIf="item.username">{{item.username}}</h2>
+        <p *ngIf="item.gadget">Gadget : {{item.gadget}}</p>
+        <p *ngIf="item.make_name">Make : {{item.make_name}}</p>
+        <p *ngIf="item.gadget">Model : {{item.model}}</p>
+        <p *ngIf="item.service_type=='2'">problem: {{item.service}}</p>
+        <p *ngIf="item.service_type=='1'">problem: {{item.service}}</p>
+        <!-- <p>Model: {{item.Model}}</p> -->
+        <!-- <ion-note item-end *ngIf="item.note">{{item.note}}</ion-note> -->
+      </button>
+      <hr class="style1">
+    </ion-item>
+  </ion-list>
+  <div *ngIf ="assignedOffers?.length == 0">
+      <ion-label class="datalength">No Services Assigned</ion-label>
+  </div>
+</ion-content>

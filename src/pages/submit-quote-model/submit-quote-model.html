@@ -1,0 +1,99 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title></ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="closeModel()"><ion-icon name="close-circle"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="background">
+
+  <ion-card class="ion-cards">
+
+  <ion-card-header align ="center">
+    <strong class="header">submit Quote</strong>
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-list class ="contact">
+
+      <ion-item class="text">
+        <ion-input type="text" placeholder="Enter original spare price" [(ngModel)]="price"></ion-input>
+      </ion-item>
+      <ion-item class="text" *ngIf="(item.service_type=='2')" >
+          <ion-input type="text" placeholder="Enter 2nd quality price" [(ngModel)]="SecQualityprice"></ion-input>
+        </ion-item>
+
+
+      <ion-item class="text">
+            <!-- <ion-label>Time Required To Service:</ion-label> -->
+            <ion-select class="myCustomSelect" placeholder="Time Required To Service:" [(ngModel)]="timeRequired">
+                <ion-option value="Same Day Delivery">Same Day Delivery</ion-option>
+                <ion-option value="Next Day Delivery">Next Day Delivery</ion-option>
+                <!-- <ion-option value="Tomorrow">Tomorrow</ion-option> -->
+                <ion-option value="1-2 Days">1-2 Days</ion-option>
+                <ion-option value="3-5 Days">3-5 Days</ion-option>
+                <ion-option value="More than week">More than week</ion-option>
+                <ion-option value="15 Days and above">15 Days and above</ion-option>
+                <!-- <ion-option value="1 month">1 month</ion-option> -->
+            </ion-select>
+        </ion-item>
+        <ion-item class="text">
+          <!-- <ion-label>Warrenty Period:</ion-label> -->
+          <ion-select class="myCustomSelect" placeholder="Warrenty Period:" [(ngModel)]="Warranty">
+              <ion-option value="No warranty">No warranty</ion-option>
+              <ion-option value="1 month">1 month</ion-option>
+              <ion-option value="3 months">3 months</ion-option>
+              <ion-option value="6 months">6 months</ion-option>
+              <ion-option value="1 year">1 year</ion-option>
+          </ion-select>
+      </ion-item>
+      <ion-item class="text">
+        <!-- <ion-label>Home Pickup/Delivery:</ion-label> -->
+        <ion-select class="myCustomSelect" placeholder="Home Pickup/Delivery:" [(ngModel)]="pickup">
+            <ion-option value="no">Not Available</ion-option>
+            <ion-option value="free">Free</ion-option>
+            <ion-option value="With additional charges">Additional charge(Max Rs100)</ion-option>
+        </ion-select>
+    </ion-item>
+
+  <ion-item class="text">
+    <ion-input type="text" placeholder="Note to customer" [(ngModel)]="description"></ion-input>
+  </ion-item>
+
+      <!-- <button ion-button primary (click)="stopRecord()" *ngIf="recording"><ion-icon name="mic-off"></ion-icon>&nbsp;&nbsp;Stop Record</button>
+        <button ion-button primary (click)="startRecord()" *ngIf="!recording"><ion-icon name="mic"></ion-icon>&nbsp;&nbsp;Start Record</button> -->
+        <ion-row class="voice">
+          <ion-col col-5> <h6 style="color:#fff" >Voice Note :</h6></ion-col>
+          <ion-col col-4>
+              <!-- <button class="record" ion-button (click)="audio()"></button>
+                  <ion-icon name="ios-mic" color="dark">&nbsp;</ion-icon> record</button> -->
+                  <button ion-button class="record" (click)="stopRecord()" *ngIf="recording"><ion-icon name="ios-mic" color="dark">&nbsp;</ion-icon>&nbsp;&nbsp;Stop</button>
+                  <button ion-button class="record" (click)="startRecord()" *ngIf="!recording"><ion-icon name="ios-mic" color="dark">&nbsp;</ion-icon>&nbsp;&nbsp;Record</button>
+          </ion-col>
+        </ion-row>
+        <ion-list>
+          <ion-item *ngFor="let audio of audioList; index as i;">
+            <p>{{audio.filename}}</p>
+            <button ion-button clear item-end large (click)="playAudio(audio.filename, i)"><ion-icon name="play"></ion-icon></button>
+          </ion-item>
+        </ion-list>
+
+</ion-list>
+
+ <button ion-button block class="button1" (click)="creditsCheck()">Send Quote</button>
+ <!-- <button ion-button block class="button" (click)="uploadAudio()">Send Quote</button> -->
+ 
+  <!-- <button ion-button block class="button" (click)="closeModel()">cancel</button> -->
+  </ion-card-content>
+
+</ion-card>
+
+
+
+</ion-content>

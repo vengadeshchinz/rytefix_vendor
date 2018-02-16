@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "841332537316",
+    "firebase_url": "https://rytefix-partner.firebaseio.com",
+    "project_id": "rytefix-partner",
+    "storage_bucket": "rytefix-partner.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:841332537316:android:9c336590378f7257",
+        "android_client_info": {
+          "package_name": "com.com.rytefixpartner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "841332537316-bj0kr2d84efcefnc1pppkf6887tb6m6s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAJCdH9T94d3BJaC-nP30rDY5Gghw6hoo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

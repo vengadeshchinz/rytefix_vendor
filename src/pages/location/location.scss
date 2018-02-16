@@ -1,0 +1,25 @@
+page-location {
+    #map {
+        margin-top:50px;
+          width: 100%;
+          height: 70% !important;
+        }
+        #over_map {
+          position: relative;
+          width: 100%;
+          height: 15%;
+          // bottom: -100px;
+          z-index: 99;
+          background-color: rgba(85, 94, 110, 0.7215686274509804);
+          color: #fff;
+          font-weight: 500;
+          font-size: 15px;
+          padding: 0px;
+          margin:0px;
+        }
+        .backgroundcolor{
+          background-color: #7a3e3e;
+          color:#fff;
+        }
+
+}

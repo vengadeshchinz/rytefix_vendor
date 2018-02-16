@@ -1,0 +1,27 @@
+<ion-header>
+  
+    <ion-navbar>
+      <ion-title>Recharge History</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  <ion-content>
+  
+    <ion-list>
+      <ion-item *ngFor="let item of topupHistory">
+        <button ion-item >
+          <!-- <ion-avatar item-start>
+            <img [src]="item.profilePic" />
+          </ion-avatar> -->
+          <h2>Recharged amount : {{item.topup_amt}}</h2>
+          <p>Payment Mode     : {{item.payment_mode}}</p>
+          <p>recharged on     : {{item.topup_on}}</p>
+          <!-- <ion-note item-end>asdssa</ion-note> -->
+        </button>
+      </ion-item>
+    </ion-list>
+    <div *ngIf="topupHistory?.length==0">
+        <ion-label class="datalength">No Data Found</ion-label>
+    </div>
+  </ion-content>

@@ -1,0 +1,9 @@
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore rytefixpartner.keystore rytefix.apk alias_name
+
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore appkeys.jks rytefixpartner.apk prominere
+
+appkeys.jks
+
+keytool -genkey -v -keystore rytefixpartner.keystore -alias alias_name -keyalg RSA -keysize 2048 -validity 10000
+
+keytool pass: prominere

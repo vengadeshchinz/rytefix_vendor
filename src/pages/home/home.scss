@@ -1,0 +1,162 @@
+page-home {
+
+
+  .container {
+      height: 33%;
+      margin:3px;
+     
+       }
+       .ion-col{
+         margin-bottom: 2px;
+        //box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        -webkit-box-shadow: 20px 0px 20px -6px #777;
+         -moz-box-shadow: 20px 0px 20px -6px #777;
+              box-shadow: 20px 0px 20px -6px #777;
+        border-radius: 15px 15px;
+        padding: 20px; 
+        width:50%;
+        height:30%;
+       }
+      
+  
+       .iconImage{
+            height: 80%;
+            width: 80%;
+            margin-left:15px;
+       }
+       .iconLabel{
+            text-align: center;
+            text-transform: capitalize;
+            font-family: 'Raleway',sans-serif;
+            font-style: normal;
+            font-size: 11px;
+            font-weight: 600;
+            font-variant: small-caps;
+            
+           }
+  
+      .background{
+        background: linear-gradient(250deg,#B3E5FC,#CFD8DC,#ECEFF1,#E1F5FE);
+      //   background: linear-gradient(25deg,#E0E0E0,#CFD8DC,#BDBDBD,#F5F5F5);
+        background-size: 400% 400%;
+        animation: colorchange 25s ease-in-out infinite;
+  
+  
+  //    background: url('../assets/imgs/bg3.jpg');
+  //  background-repeat: no-repeat;
+  //  background-size:cover;
+  }
+  
+  @keyframes colorchange{
+    0%{background-position: 0% 99%}
+    50%{background-position: 100% 1%}
+    100%{background-position: 10% 90%}
+  }
+  .searchBar{
+  
+      width: 50%
+  }
+  .ion-grid{
+      margin-top: 10px;
+      margin-left:0px;
+  }
+  
+  // animate top.......................
+  .animate-top {
+    position: relative;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 1s;
+    animation-name: animatetop;
+    animation-duration: 1s
+  }
+  
+  @-webkit-keyframes animatetop {
+    from { top:-100px; opacity:0 } 
+    to { top:0px; opacity:1 }
+  }
+  
+  @keyframes animatetop { 
+    from{ top:-100px; opacity:0 } 
+    to{ top:0px; opacity:1 }
+  }
+  
+  //animate bottom....................
+  .animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+  }
+  
+  @-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 } 
+    to { bottom:0px; opacity:1 }
+  }
+  
+  @keyframes animatebottom { 
+    from{ bottom:-100px; opacity:0 } 
+    to{ bottom:0px; opacity:1 }
+  }
+  
+  // animate left......................
+  
+  .animate-left {
+    position: relative;
+    -webkit-animation-name: animateleft;
+    -webkit-animation-duration: 1s;
+    animation-name: animateleft;
+    animation-duration: 1s
+  }
+  
+  @-webkit-keyframes animateleft {
+    from { left:-100px; opacity:0 } 
+    to { left:0px; opacity:1 }
+  }
+  
+  @keyframes animateleft { 
+    from{ left:-100px; opacity:0 } 
+    to{ left:0px; opacity:1 }
+  }
+  
+  // animate right...............
+  
+  .animate-right {
+    position: relative;
+    -webkit-animation-name: animateright;
+    -webkit-animation-duration: 1s;
+    animation-name: animateright;
+    animation-duration: 1s
+  }
+  
+  @-webkit-keyframes animateright {
+    from { right:-100px; opacity:0 } 
+    to { right:0px; opacity:1 }
+  }
+  
+  @keyframes animateright { 
+    from{ right:-100px; opacity:0 } 
+    to{ right:0px; opacity:1 }
+  }
+  .icon2{
+    color:#fff;
+  font-size:60px;
+  text-align: center;
+  color:#7a3e3e;
+  margin-top:5px;
+}
+.text1{
+  margin-top: 20px;
+  color:#fff;
+  font-size:12px;
+  text-align: center !important;
+  color:#7a3e3e;
+  font-weight:900;
+}
+.avatar{
+  height: 70px;
+  width: 70px;
+  margin: auto;
+  // margin-bottom: 5px !important;
+}
+}
